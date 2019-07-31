@@ -31,9 +31,9 @@
   var
     vAx, vBx, vCx, vDx: Cardinal;
   begin
-    vAx := 1;
+    vAx := 1; //parse leaf 0x01
     GetCPUID(vAx, vBx, vCx, vDx);
-    if vCx shr 31 = 1 then
+    if vCx shr 31 = 1 then //determine hypervisor bits
     begin
       Result := True;
     end
